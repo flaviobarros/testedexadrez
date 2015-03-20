@@ -19,21 +19,12 @@ To view the Member page, you must
 
 <!-- start example HTML --->
 <div id="board" style="width: 400px"></div>
-<input type="button" id="startBtn" value="Start Position" />
 <!-- end example HTML --->
 
 <script type="text/javascript" src='/static/js/json3.min.js'></script>
 <script type="text/javascript" src='/static/js/jquery.min.js'></script>
 <script type="text/javascript" src='/static/js/chessboard.js'></script>
 <script>
-var board = new ChessBoard('board', {
-  draggable: true,
-  moveSpeed: 'slow',
-  snapbackSpeed: 500,
-  snapSpeed: 100,
-  position: 'start'
-});
-
-$('#startBtn').on('click', board.start);
+var board = new ChessBoard('board', "{{fen}}");
 </script>
 {% endblock %}
