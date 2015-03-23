@@ -21,6 +21,27 @@ To view the Member page, you must
 <div id="board" style="width: 400px"></div>
 <!-- end example HTML --->
 
+<div id="main">
+  <h2>Contact</h2>
+  <form action="{{ url_for('contact') }}" method=post>
+    {{ form.hidden_tag() }}
+
+    {{ form.nome.label }}
+    {{ form.nome }}
+
+    {{ form.email.label }}
+    {{ form.email }}
+
+    {{ form.assunto.label }}
+    {{ form.assunto }}
+
+    {{ form.mensagem.label }}
+    {{ form.mensagem }}
+
+    {{ form.submit }}
+  </form>
+  </div>
+
 <script type="text/javascript" src='/static/js/json3.min.js'></script>
 <script type="text/javascript" src='/static/js/jquery.min.js'></script>
 <script type="text/javascript" src='/static/js/chessboard.js'></script>
